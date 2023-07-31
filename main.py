@@ -22,12 +22,12 @@ import datetime
 # Configuring text-to-speech engine with pyttsx3
 engine = pyttsx3.init()
 
-# Function to speak the assistant's response
+# Speak the Assistant's response
 def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# Function to recognize speech
+# recognizing speech using SpeechRecognition library as sr
 def recognize_speech():
     r = sr.Recognizer()
 
@@ -45,7 +45,7 @@ def recognize_speech():
         print("Error: Couldn't recognize speech.")
         return ""
 
-# Function to set a reminder
+# Setting a reminder function
 def set_reminder():
     speak("Sure, please tell me what would you like me to remind you about?")
     reminder_text = recognize_speech()
@@ -67,7 +67,7 @@ def set_reminder():
             except ValueError:
                 speak("Sorry, I couldn't understand the time. Please try again.")
 
-# Function to create a to-do list
+# creating a to-do list function - Code I/P
 def create_todo_list():
     pass
     # Code I/P - managing a to-do list.
